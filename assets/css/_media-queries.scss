@@ -1,0 +1,97 @@
+@media (max-width: 73.25em) {
+  header {
+    justify-content: space-between;
+    .menu,
+    .online-order {
+      display: none;
+    }
+
+    .logo {
+      text-align: left;
+      position: relative;
+      left: 2rem;
+    }
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 71.875em) {
+  .intro {
+    img {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 48.875em) {
+  .intro {
+    img {
+      width: 70%;
+    }
+  }
+
+  .tooth-1,
+  .tooth-3,
+  .tooth-6,
+  .tooth-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .intro {
+    img {
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: 28.625em) {
+  .top-bar {
+    .contact-bar {
+      display: block;
+
+      p {
+        padding: 0.2rem 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 87.875em) {
+  .services {
+    .offer-menu {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 56.625em) {
+  .services {
+    .offer-menu {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 37.625em) {
+  .services {
+    .offer-menu {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 68.875em) {
+  .dental-hygiene p {
+    width: 80%;
+  }
+
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+}

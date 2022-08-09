@@ -1,0 +1,43 @@
+.responsive-menu {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  width: 100%;
+  position: relative;
+  transform: translateX(-100%);
+  z-index: 3;
+  background-color: $third-color;
+  transition: 0.2s all ease-in-out;
+
+  .responsive-nav {
+    li {
+      border-bottom: 1px solid white;
+      padding: 0.5rem 0;
+
+      &:last-child {
+        border-bottom: none;
+        background-color: $main-color;
+        @include nested-box-shadow;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $second-color;
+      }
+    }
+    text-align: center;
+    a {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+.responsive-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}

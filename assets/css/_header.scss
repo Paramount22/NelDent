@@ -1,0 +1,147 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  min-height: 10vh;
+  position: relative;
+
+  .logo,
+  .menu,
+  .online-order {
+    flex-basis: 33.33%;
+  }
+
+  .logo,
+  .online-order {
+    text-align: center;
+    //display: none;
+  }
+
+  .online-order {
+    a {
+      padding: 0.7rem 0.9rem;
+      background-color: $third-color;
+      font-weight: 600;
+      color: white;
+      transition: 0.2s all ease;
+      font-size: 1rem;
+      border-radius: 1.6rem;
+      @include nested-box-shadow;
+
+      &:hover,
+      &:active {
+        background-color: $main-color;
+      }
+    }
+  }
+
+  .menu {
+    text-align: left;
+
+    ul {
+      display: flex;
+      li {
+        margin-left: 0.5rem;
+        &:first-child {
+          margin-left: 0;
+        }
+        a {
+          font-size: 1.2rem;
+          font-weight: 600;
+          padding: 0.6rem 0.8rem;
+          transition: all 0.2s ease;
+          border-radius: 1.6rem;
+
+          &:hover,
+          &:active {
+            background-color: $main-color;
+            color: white;
+            @include nested-box-shadow;
+          }
+
+          &.active {
+            background-color: $main-color;
+            color: white;
+            @include nested-box-shadow;
+          }
+        }
+      }
+    }
+  }
+}
+
+.top-bar {
+  background-color: $main-color;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .contact-bar {
+    display: flex;
+    i {
+      margin-right: 0.2rem;
+    }
+
+    a {
+      color: white;
+      transition: all 0.2s ease;
+      font-weight: 600;
+
+      &:hover,
+      &:active {
+        color: lighten($third-color, 10%);
+      }
+    }
+  }
+}
+
+.top-bar {
+  .contact-bar p {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.6rem 0;
+    white-space: nowrap;
+  }
+
+  .social {
+    margin-right: 1rem;
+  }
+
+  .social a {
+    color: white;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:active {
+      color: lighten($third-color, 10%);
+    }
+  }
+}
+
+/*hamburger*/
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 2rem;
+}
+
+.hamburger-box {
+  bottom: 5px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: $main-color;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: $main-color;
+}

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+$main-color: #eb1c83;
+$second-color: #4e4a4c;
+$third-color: #47b8bf;
+
+$bg-gradient: linear-gradient(
+  160deg,
+  rgba($third-color, 0.4) 0%,
+  rgba(255, 255, 255, 1) 50%,
+  rgba($third-color, 0.4) 100%
+);
+
+$main-border: 5px solid $main-color;
+
+::selection {
+  background-color: $third-color;
+  color: white;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  color: $second-color;
+  position: relative;
+}
+
+a {
+  color: $second-color;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Parisienne", cursive;
+}

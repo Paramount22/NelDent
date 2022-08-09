@@ -1,0 +1,27 @@
+.back-to-top {
+  position: fixed;
+  border: none;
+  background: none;
+  right: 1.5%;
+  bottom: 3%;
+  font-size: 4.5rem;
+  cursor: pointer;
+
+  .fa-caret-up {
+    color: $main-color;
+    display: none;
+
+    &:hover,
+    &:active {
+      color: $third-color;
+    }
+  }
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease both;
+}
+
+.fade-out-right {
+  animation: fadeOutRight 0.8s ease both;
+}

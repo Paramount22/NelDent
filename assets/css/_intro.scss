@@ -1,0 +1,119 @@
+.main-title {
+  text-align: center;
+  margin: 2rem 1rem 1.5rem 1rem;
+  font-size: clamp(1.5rem, 10vw, 2.5rem);
+  color: $third-color;
+  position: relative;
+  z-index: 2;
+
+  span {
+    color: $main-color;
+  }
+}
+
+.intro {
+  display: flex;
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  height: calc(100vh - 256px);
+  background: $bg-gradient;
+
+  h2 {
+    text-align: center;
+    font-size: clamp(1rem, 6vw, 2rem);
+    white-space: nowrap;
+    margin: 0 1rem;
+    animation: bounceInUp 2s;
+    padding-top: 1rem;
+  }
+
+  img {
+    position: absolute;
+    border-radius: 50%;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 30%;
+    border: $main-border;
+    z-index: 2;
+  }
+
+  .tooth-1 {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    transform: rotate(-10deg);
+    color: $main-color;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 25px 50px -12px;
+    animation: bounceInUp 1.5s;
+    animation-delay: 0.25s;
+  }
+
+  .tooth-2 {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: rotate(15deg);
+    color: $third-color;
+    text-shadow: rgba(0, 0, 0, 1) 0px 25px 50px -12px;
+    animation: bounceInUp 1.5s;
+    animation-delay: 0.1s;
+  }
+
+  .tooth-3 {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: rotate(30deg);
+    color: lighten($main-color, 10%);
+    animation: bounceInUp 1.5s;
+    animation-delay: 0.3s;
+  }
+
+  .tooth-4 {
+    position: absolute;
+    top: 75%;
+    right: 25%;
+    transform: rotate(-15deg);
+    color: lighten($third-color, 10%);
+    animation: bounceInUp 1.5s;
+    animation-delay: 0.2s;
+  }
+
+  .tooth-5 {
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    transform: rotate(-10deg);
+    color: darken($third-color, 10%);
+    animation: bounceInUp 1.5s;
+    animation-delay: 0.5s;
+  }
+
+  .tooth-6 {
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    transform: rotate(-35deg);
+    color: darken($main-color, 5%);
+    animation: bounceInUp 1.5s;
+    animation-delay: 0.5s;
+  }
+
+  .fa-tooth {
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .fa-tooth {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+h2::selection,
+p::selection {
+  color: white;
+  background-color: $main-color;
+}

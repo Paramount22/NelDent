@@ -1,0 +1,130 @@
+.services {
+  min-height: 50vh;
+  margin-top: 3.2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    color: $third-color;
+    //font-size: 3.5rem;
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .offer-menu {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    width: 100%;
+    justify-content: space-around;
+    //background-color: gray;
+    flex-wrap: wrap;
+
+    li {
+      margin: 0.5rem;
+      background-color: $third-color;
+      transition: all 0.2s ease;
+      border-radius: 1.6rem;
+      @include nested-box-shadow;
+
+      &:hover,
+      &:active {
+        background-color: $main-color;
+        @include nested-box-shadow;
+        transform: scale(1.05);
+      }
+    }
+
+    a {
+      white-space: nowrap;
+      width: 100%;
+      padding: 1rem 2rem;
+      color: white;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 600px) {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      &.active {
+        background-color: $main-color;
+        transform: scale(1.05);
+        @include nested-box-shadow;
+        border-radius: 1.6rem;
+      }
+    }
+  }
+}
+
+.subsection {
+  width: 60vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: end;
+  margin: 3rem 0;
+  animation: fadeInDown 0.7s ease;
+
+  &.hide {
+    display: none;
+  }
+
+  @media (max-width: 90em) {
+    width: 80vw;
+  }
+
+  @media (max-width: 67.5em) {
+    width: 100vw;
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 52em) {
+    grid-template-columns: 1fr;
+    display: grid;
+    row-gap: 1rem;
+  }
+
+  h3 {
+    color: $third-color;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    grid-row: 1;
+    grid-column: 2/3;
+  }
+
+  img {
+    border-radius: 1rem;
+    margin-right: 2rem;
+    height: auto;
+    width: 90%;
+    margin-bottom: 1rem;
+    @media (max-width: 52em) {
+      grid-row: 2/3;
+    }
+  }
+
+  p {
+    grid-column: 2/3;
+    grid-row: 1;
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    line-height: 1.8;
+    font-weight: 300;
+    text-align: justify;
+  }
+}
+
+.hide {
+  display: none;
+}
