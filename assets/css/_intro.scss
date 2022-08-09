@@ -22,10 +22,14 @@
   h2 {
     text-align: center;
     font-size: clamp(1rem, 6vw, 2rem);
-    white-space: nowrap;
+
     margin: 0 1rem;
     animation: bounceInUp 2s;
     padding-top: 1rem;
+
+    @media (max-width: 25em) {
+      padding-right: 1rem;
+    }
   }
 
   img {

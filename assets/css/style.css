@@ -246,11 +246,16 @@ header .menu ul li a.active {
 .intro h2 {
   text-align: center;
   font-size: clamp(1rem, 6vw, 2rem);
-  white-space: nowrap;
   margin: 0 1rem;
   -webkit-animation: bounceInUp 2s;
           animation: bounceInUp 2s;
   padding-top: 1rem;
+}
+
+@media (max-width: 25em) {
+  .intro h2 {
+    padding-right: 1rem;
+  }
 }
 
 .intro img {
@@ -1001,6 +1006,7 @@ svg {
   bottom: 3%;
   font-size: 4.5rem;
   cursor: pointer;
+  outline: none;
 }
 
 .back-to-top .fa-caret-up {
