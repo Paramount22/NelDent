@@ -270,6 +270,12 @@ header .menu ul li a.active {
   z-index: 2;
 }
 
+@media (max-width: 25em) {
+  .intro img {
+    top: 20%;
+  }
+}
+
 .intro .tooth-1 {
   position: absolute;
   top: 45%;

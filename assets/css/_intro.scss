@@ -41,6 +41,10 @@
     width: 30%;
     border: $main-border;
     z-index: 2;
+
+    @media (max-width: 25em) {
+      top: 20%;
+    }
   }
 
   .tooth-1 {
